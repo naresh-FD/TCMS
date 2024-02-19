@@ -1,5 +1,8 @@
 import json
 import os
+from datetime import datetime
+current_time = datetime.now().strftime("%Y-%m-%d")
+
 
 class JSONStore:
     def __init__(self, filepath='data.json'):

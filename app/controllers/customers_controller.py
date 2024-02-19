@@ -26,7 +26,7 @@ def choose_plan(customer_id):
     data = request.json
     updated_customer = json_store.update_customer_plan(customer_id, data['plan_name'])
     if updated_customer:
-        return jsonify({"message": "Plan chosen successfully", "customer": updated_customer}), 200
+        return jsonify({"message": "Plan updated successfully", "customer": updated_customer}), 200
     return jsonify({"error": "Customer or plan not found"}), 404
 
 
@@ -47,9 +47,9 @@ def change_plan(customer_id):
     data = request.json
     new_plan_data = {
         'plan_name': data['new_plan_name'],
-        'plan_cost': data['plan_cost'],  # This could be fetched from the plans data instead of provided by the user
-        'validity': data['validity'],  # Same as above
-        'plan_status': data['plan_status']  # And this as well
+        'plan_cost': data['plan_cost'],
+        'validity': data['validity'],
+        'plan_status': data['plan_status']
     }
     updated_customer = json_store.change_plan(customer_id, new_plan_data)
     if updated_customer:

@@ -1,0 +1,40 @@
+.register-customer {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.register-customer h2 {
+  text-align: center;
+}
+
+.register-customer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-customer label {
+  margin-bottom: 10px;
+}
+
+.register-customer input {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.register-customer button {
+  padding: 10px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-customer button:hover {
+  background-color: #003d82;
+}
